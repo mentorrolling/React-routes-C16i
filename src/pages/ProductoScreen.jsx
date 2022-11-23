@@ -23,24 +23,26 @@ const ProductoScreen = () => {
         {producto.length > 0 ? (
           <div className="col">
             <h1>Producto id: {producto[0].id}</h1>
-            <div class="card my-3">
-              <div class="row g-0">
-                <div class="col-md-4 p-2">
+            <div className="card my-3">
+              <div className="row g-0">
+                <div className="col-md-4 p-2">
                   <img
                     src={producto[0].image}
-                    class="img-fluid rounded-start"
+                    className="img-fluid rounded-start"
                     alt={producto[0].title}
                   />
                 </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">{producto[0].title}</h5>
-                    <p class="card-text">{producto[0].description}</p>
-                    <p class="card-text">
-                      <small class="text-muted">{producto[0].category}</small>
+                <div className="col-md-8">
+                  <div className="card-body">
+                    <h5 className="card-title">{producto[0].title}</h5>
+                    <p className="card-text">{producto[0].description}</p>
+                    <p className="card-text">
+                      <small className="text-muted">
+                        {producto[0].category}
+                      </small>
                     </p>
-                    <p class="card-text">
-                      <small class="text-muted">
+                    <p className="card-text">
+                      <small className="text-muted">
                         Stock: {producto[0].rating.count}
                       </small>
                     </p>
