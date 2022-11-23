@@ -1,16 +1,13 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
 
 const NavbarApp = () => {
-  let activeStyle = {
-    textDecoration: "underline",
-  };
+
   return (
     <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
       <div className="container">
-        <Link className="navbar-brand" to="/">
+        <a className="navbar-brand" href="#">
           Router App
-        </Link>
+        </a>
         <button
           className="navbar-toggler"
           type="button"
@@ -25,23 +22,23 @@ const NavbarApp = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <NavLink
+              <a
                 className="nav-link"
                 aria-current="page"
-                to="/"
-                style={({ isActive }) => (isActive ? activeStyle : undefined)}
+                href="#"
+                
               >
                 Home
-              </NavLink>
+              </a>
             </li>
             <li className="nav-item">
-              <NavLink
+              <a
                 className="nav-link"
-                to="/about"
-                style={({ isActive }) => (isActive ? activeStyle : undefined)}
+                href="#"
+                
               >
                 About
-              </NavLink>
+              </a>
             </li>
           </ul>
         </div>
