@@ -4,6 +4,7 @@ import NavbarApp from "../components/NavbarApp";
 import AboutScreen from "../pages/AboutScreen";
 import ErrorScreen from "../pages/ErrorScreen";
 import HomeScreen from "../pages/HomeScreen";
+import ProductoScreen from "../pages/ProductoScreen";
 
 const RoutesApp = () => {
   return (
@@ -11,6 +12,8 @@ const RoutesApp = () => {
       <NavbarApp />
       <Routes>
         <Route path="/" element={<HomeScreen />} />
+        <Route path="/product/:id" element={<ProductoScreen />} />
+
         <Route path="/about" element={<AboutScreen />} />
         <Route path="*" element={<ErrorScreen />} />
       </Routes>
