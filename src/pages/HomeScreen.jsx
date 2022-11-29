@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-
+import { Link } from "react-router-dom";
 import productos from "../data/product.json";
 
 const HomeScreen = () => {
-  const [products, setProducts] = useState(productos.product);
+  const { product } = productos;
+  const [products, setProducts] = useState(product);
   return (
     <div className="container">
       <div className="row mt-5">
@@ -25,7 +26,9 @@ const HomeScreen = () => {
                 </div>
                 <div className="col-md-8">
                   <div className="card-body">
-                    <h5 className="card-title">{producto.title}</h5>
+                    <Link className="nav-link" to={`/product/${producto.id}`}>
+                      <h5 className="card-title">{producto.title}</h5>
+                    </Link>
 
                     <p className="card-text">{producto.category}</p>
                     <p className="card-text">
